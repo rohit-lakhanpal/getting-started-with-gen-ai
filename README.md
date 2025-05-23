@@ -167,3 +167,102 @@ On the right side, the **chat history panel** displays the ongoing conversation,
 - **Upload**: Click the "Upload" button in the chat interface and select the file you saved.
 - **Observations**: Note how the assistant interprets the file and reasons over it.
 
+### Activity 11: Summarize an RFP based on a recommended format
+- **Goal**: Use the assistant to summarize an RFP based on a recommended format.
+- **System Instructions**: 
+    ```
+    Summarize the RFP based on the following format:
+    1. Executive Summary
+    2. Key Dates
+    3. Scope of Work
+    4. Evaluation Criteria
+    5. Submission Requirements
+    ```
+- **User Message**: Copy and paste the RFP text using this [sample rfp](/docs/resources/sample-digital-advertising-rfp.md) as a reference.
+- **Observations**: Note how the assistant organizes the information based on the provided format.
+- **Extra Credit**: Check for accuracy and completeness of the summary. If it is inaccurate could you try changing the system instructions to be more specific e.g. "Do not include any information that is not in the RFP. Do not make any assumptions about the RFP. Only include information that is in the RFP."
+
+### Activity 12: Zero-Shot, One-Shot, and Few-Shot 
+- **Goal**: Understand the difference between zero-shot, one-shot, and few-shot learning.
+- **System Instructions**: 
+    ```
+    You are an AI Assistant designed to help users interpret, analyze or draft Requests for Proposals (RFPs). 
+    ```
+- **User Message**: 
+    ```
+    Draft a cover-letter snippet for a bid.
+    ```
+- **Zero-Shot**: No examples provided.
+- **One-Shot**: Provide one example of a cover letter snippet followed by the user message with an expected output.
+- **Few-Shot**: Provide two or three examples of cover letter snippets followed by the user message with an expected output.
+- **Observations**: Note how the assistant's response changes based on the number of examples provided.
+
+### Activity 13: Self-Critique
+- **Goal**: Use the assistant to critique its own response and observe changes in accuracy.
+- **System Instructions**: 
+    ```
+    You will be provided one or more RPFs, and your task is to carefully analyze their contents to answer specific questions or provide requested feedback. 
+    ```
+- **User Message**: 
+    ```
+    What is the minimum number of quality applications per month that FicticiousPD expects as a result of the digital advertising campaign?
+
+    <RFP>
+
+    PLEASE REPLACE THIS TEXT WITH THE RFP CONTENT FROM [this file](/docs/resources/sample-digital-advertising-rfp.md)
+
+    </RFP>
+    ```
+- **Observations**: Note how the assistant critiques its own response and whether it improves accuracy.
+- **Extra Credit**: Ask the assistant to critique its own response and then ask it to provide a better response. 
+    ```
+    Provide reasoning for your answer.
+    ```
+
+    In addition add the following system instructions:
+    ```
+    Focus on clarity, completeness, and relevance when analyzing the content. Use logical reasoning to extract pertinent details before forming conclusions or crafting responses.
+    ```
+
+### Activity 14: Classification
+- **Goal**: Use the assistant to classify RFPs based on their content.
+- **System Instructions**: 
+    ```
+    Classify the RFP based on the following categories:
+    1. Digital Advertising
+    2. Branding
+    3. Social Media
+    4. Public Relations
+    5. Market Research
+    ```
+- **User Message**: Use the sample RFP text from [this file](/docs/resources/sample-digital-advertising-rfp.md).
+- **Observations**: Note how the assistant classifies the RFP based on the provided categories.
+
+
+### Activity 15: Response Generation (specify a format)
+- **Goal**: Expect responses in a specfic format. (e.g. JSON, CSV, etc.)
+- **System Instructions**: 
+    ```
+    Classify the RFP based on the following categories:
+    1. Digital Advertising
+    2. Branding
+    3. Social Media
+    4. Public Relations
+    5. Market Research
+
+    Provide the response in JSON format. 
+    ```
+- **User Message**: Use the sample RFP text from [this file](/docs/resources/sample-digital-advertising-rfp.md).
+- **Observations**: Note how the assistant generates the response in the specified format.
+- **Extra Credit**: Be more specific about the format you want. For example, you can specify the JSON format to be:
+    ```
+    {
+        "categories": [
+            "Digital Advertising",
+            "Branding",
+            "Social Media",
+            "Public Relations",
+            "Market Research"
+        ]
+    }
+    ```
