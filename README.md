@@ -89,4 +89,81 @@ On the right side, the **chat history panel** displays the ongoing conversation,
 - **Observations**: Note how the assistant's response is influenced by the system message.
 - **Extra Credit**: Determine which parts are influenced by system vs. user messages.  
 
+### Activity 5: Instruction Mode  
+- **Goal**: Enforce a specific output format.  
+- **System Instructions**: 
+    ```
+    You are a procurement-savvy assistant. 
+    Reply as bulleted lists. 
+    ```
+- **User Message**: 
+    ```
+    What are the key components of a successful RFP?
+    ```
+- **Observations**: Note how the assistant's response is influenced by the system message.
+- **Extra Credit**: Try asking the assistant to provide a list of 5 items. 
+    ```
+    What are the key components of a successful RFP? Provide a list of 5 items.
+    ```
+
+### Activity 6: Use the "Generate System Prompt" Button
+- **Goal**: Use the "Generate System Prompt" button to create a system message.
+- **Activity**: 
+    - Click the "Generate System Prompt" button. This should open up a modal window that asks you to describe what you want the model to do.
+    - Type in 
+        ```
+        An AI Assistant designed to help interpret and analyze existing Requests for Proposals (RFPs).
+        ```
+    - Click the "Generate" button.
+- **User Message**: 
+    ```
+    What are the key components of a successful RFP?
+    ```
+- **Observations**: Note how the assistant's response is influenced by the system message.
+
+
+### Activity 7: Temperature Control  
+- **Goal**: Compare creativity at different temperatures.  
+- **System Instructions**: Leave blank.
+- **User Message**: 
+    ```
+    Draft a cover-letter snippet for a bid.
+    ```
+- **Temp = 0.0 vs. Temp = 1.0**  
+- **Observations**: Note the creativity and variability of the assistant's response.
+
+### Activity 8: Top P Control
+- **Goal**: Compare creativity at different Top P values.
+- **System Instructions**: Leave blank.
+- **User Message**: 
+    ```
+    Generate an executive summary of our bid portal.
+    ```
+- **Top P** = 0.3 vs. top_p = 1.0**  
+- **Observations**: Note the creativity and variability of the assistant's response.
+
+### Activity 9. Max Response  
+- **Goal**: Limit response length.  
+- **System Instructions**: Leave blank.
+- **User Message**: 
+    ```
+    Draft a cover-letter snippet for a bid.
+    ```
+- **Max Response = 50 vs. Max Response = 200**
+- **Observations**: Observe truncation vs. detailed summary.  
+
+
+### Activity 10: Attaching Files
+- **Goal**: Upload a file and ask the assistant to analyze it.
+- **System Instructions**: 
+    ```
+    You are an AI Assistant designed to help users interpret and analyze existing Requests for Proposals (RFPs). Your role is to assist in extracting key details, breaking down the requirements, and identifying actionable insights from an RFP document. Provide clarity, structure, and actionable recommendations to support the user in understanding and responding effectively to the RFP.
+    ```
+- **User Message**: 
+    ```
+    What is the due date?
+    ```
+- **File**: Save this file locally by right-clicking and selecting "Save As" or "Download". [Sample RFP](/docs/resources/sample-rfp-brand-usa-0010.png)![Sample RFP](/docs/resources/sample-rfp-brand-usa-0010.png)
+- **Upload**: Click the "Upload" button in the chat interface and select the file you saved.
+- **Observations**: Note how the assistant interprets the file and reasons over it.
 
